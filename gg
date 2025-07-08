@@ -110,7 +110,7 @@ Farm:AddToggle('Auto sell', true, nil, function(state)
                 local waitTime = 5
 
 
-                local hitbox = workspace.CityMap.MapCheckPoints["\208\160\209\139\208\177\208\176\208\186"].DevCheckPoint.Hitbox
+                local hitbox = workspace.CityMap.MapCheckPoints["\208\160\209\139\208\177\208\176\208\186"]:GetChildren()[2].Hitbox
 
 
                 local function onTimeOut()
