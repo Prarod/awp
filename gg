@@ -94,10 +94,11 @@ Farm:AddToggle('Auto sell', true, nil, function(state)
             while true do 
                 local player = game:GetService("Players").LocalPlayer
                 local backpack = player:WaitForChild("Backpack")
-                local fishingRod = workspace.Z00mClawAce.DevFishingRod
+                local fishingRod = game.Players.LocalPlayer.Character.DevFishingRod
                 local hel = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                 local character = player.Character or player.CharacterAdded:Wait()
                 local humanoid = character:WaitForChild("Humanoid")
+                local ff = game.Players.LocalPlayer.Character
 
                 local function teleportAndJump(targetPosition)
                     character:SetPrimaryPartCFrame(targetPosition.CFrame)
@@ -121,11 +122,11 @@ Farm:AddToggle('Auto sell', true, nil, function(state)
                     wait(0.8)
                     player.Character.HumanoidRootPart.CFrame = hel
     
-                    fishingRod.Parent = workspace.Z00mClawAce
+                    fishingRod.Parent = ff
                     wait(0.5)
                     fishingRod.Parent = backpack
                     wait(0.5)
-                    fishingRod.Parent = workspace.Z00mClawAce       
+                    fishingRod.Parent = ff
                 end
 
 
